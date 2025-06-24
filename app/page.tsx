@@ -29,12 +29,12 @@ const categories = [
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.3,
+          delay: 0.3,   
           duration: 0.8,
           ease: "easeInOut",
         }}
       >
-      <section className="px-6 py-10">
+      <section className="px-6 md:py-10 py-[80%]">
         <h3 className="text-4xl  font-bold text-center mb-8 text-white">Artist Categories</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 ">
           {categories.map((cat) => (
