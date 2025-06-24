@@ -34,7 +34,7 @@ export default function ArtistsPage() {
         ></div>
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_30%,black)] "></div>
     {/* <div className="relative flex h-[50rem] w-full items-center justify-center bg-white dark:bg-black"> */}
-      <h1 className="text-5xl font-bold mb-6 relative text-center tracking-wide">Explore Artists</h1>
+      <h1 className="text-3xl md:text-5xl font-bold mb-6 relative text-center tracking-wide">Explore Artists</h1>
 
       {/* Filters */}
       <div className="flex gap-4 mb-8 flex-wrap mt-10 relative justify-center items-center">
