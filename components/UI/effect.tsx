@@ -28,9 +28,9 @@ export const GoogleGeminiEffect = ({
         {description ||
           `Connecting event planners with talented artists across India.`}
       </p>
-     <div className="w-full h-[890px] -top-60 md:-top-36 flex items-center justify-center absolute z-50">
+     <div className="w-full h-[890px]  -top-60 md:-top-36 flex items-center justify-center absolute z-50">
   <a href="/artists">
-    <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-10 z-50 md:text-base text-black text-xs w-fit mx-auto">
+    <button className="font-bold cursor-pointer bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-10 z-50 md:text-base text-black text-xs w-fit mx-auto">
       Explore Artists
     </button>
   </a>
