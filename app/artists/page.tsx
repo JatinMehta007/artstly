@@ -1,7 +1,7 @@
 // app/artists/page.tsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ArtistCard } from "@/components/ArtistCard"; 
 import artistsData from "@/data/artists.json";
 import { cn } from "@/lib/utils";
