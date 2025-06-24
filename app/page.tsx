@@ -3,7 +3,7 @@
 
 import { Navbar } from "@/components/Navbar";
 import { CategoryCard } from "@/components/CategoryCard";
-import { HeroSection } from "@/components/Homepage";
+import { HeroSection } from "@/components/HeroSection";
 import { LampContainer } from "@/components/UI/lamp";
 import { motion } from "motion/react";
 
