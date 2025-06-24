@@ -34,9 +34,9 @@ const categories = [
           ease: "easeInOut",
         }}
       >
-      <section className="px-6 md:py-10 py-[80%]">
+      <section className="px-6 md:py-[400px] lg:py-[100%] xl:py-10 py-[80%]">
         <h3 className="text-4xl  font-bold text-center mb-8 text-white">Artist Categories</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4 gap-2 ">
           {categories.map((cat) => (
             <CategoryCard key={cat.name} name={cat.name} image={cat.image} />
           ))}
