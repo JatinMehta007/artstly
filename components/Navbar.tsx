@@ -24,7 +24,7 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile Menu Toggle Button */}
-        <button onClick={toggleMenu} className="sm:hidden text-gray-700">
+        <button onClick={toggleMenu} className="sm:hidden text-gray-400">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
