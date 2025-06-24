@@ -7,7 +7,7 @@ import artistsData from "@/data/artists.json";
 import { cn } from "@/lib/utils";
 
 export default function ArtistsPage() {
-  const [artists, setArtists] = useState(artistsData);
+  const [artists] = useState(artistsData);
   const [categoryFilter, setCategoryFilter] = useState("");
   const [locationFilter, setLocationFilter] = useState("");
 
