@@ -1,3 +1,4 @@
+// app/onboarding/page.tsx
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -20,6 +21,9 @@ const formSchema = z.object({
   image: z.any().optional(),
 });
 
+// Create type from schema
+type FormData = z.infer<typeof formSchema>;
+
 const categories = ["Singer", "Dancer", "DJ", "Speaker"];
 const languages = ["Hindi", "English", "Punjabi", "Bengali"];
 const feeRanges = [
@@ -38,7 +42,7 @@ export default function OnboardingPage() {
     watch,
     setValue,
     formState: { errors },
-  } = useForm({
+  } = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -50,17 +54,19 @@ export default function OnboardingPage() {
     },
   });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FormData) => {
     console.log("Submitted:", { ...data, imageFile });
     alert("Artist submitted! Check console.");
   };
 
-  const handleCheckboxChange = (field: string, value: string) => {
+  const handleCheckboxChange = (field: keyof FormData, value: string) => {
     const current = watch(field) || [];
-    if (current.includes(value)) {
-      setValue(field, current.filter((v: string) => v !== value));
-    } else {
-      setValue(field, [...current, value]);
+    if (Array.isArray(current)) {
+      if (current.includes(value)) {
+        setValue(field, current.filter((v: string) => v !== value));
+      } else {
+        setValue(field, [...current, value]);
+      }
     }
   };
 
