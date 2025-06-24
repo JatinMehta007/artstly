@@ -13,14 +13,14 @@ export const Navbar = () => {
   return (
     <nav className="w-full px-6 py-4 border-b shadow-sm bg-black">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-white tracking-tight">Artistly</h1>
+        <h1 className="text-xl font-light uppercase text-white tracking-widest">Artistly</h1>
 
         {/* Desktop Menu */}
-        <div className="hidden sm:flex space-x-6 text-sm font-medium text-white">
-          <Link href="/">Home</Link>
-          <Link href="/artists">Explore</Link>
-          <Link href="/onboarding">Onboard</Link>
-          <Link href="/dashboard">Dashboard</Link>
+        <div className="hidden sm:flex space-x-10 text-base font-medium text-white">
+          <Link href="/" className="hover:text-neutral-300">Home</Link>
+          <Link href="/artists" className="hover:text-neutral-300">Explore</Link>
+          <Link href="/onboarding" className="hover:text-neutral-300">Onboard</Link>
+          <Link href="/dashboard" className="hover:text-neutral-300">Dashboard</Link>
         </div>
 
         {/* Mobile Menu Toggle Button */}
@@ -37,7 +37,7 @@ export const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="sm:hidden overflow-hidden flex flex-col space-y-3 mt-3 text-sm font-medium text-gray-700"
+            className="sm:hidden overflow-hidden  flex flex-col space-y-3 mt-3 text-sm font-medium text-gray-700"
           >
             <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
             <Link href="/artists" onClick={() => setIsOpen(false)}>Explore</Link>
